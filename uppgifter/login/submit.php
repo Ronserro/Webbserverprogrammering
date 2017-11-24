@@ -6,8 +6,9 @@ $username = $_POST['username'];
 
 $password = $_POST['password'];
 
-$query = ;
+$query = "Select * from register where password='$password' and username='$username';";
 
-mysqli_query($dbc,$query);
+$result = mysqli_query($dbc,$query);
+
 
 ?>
