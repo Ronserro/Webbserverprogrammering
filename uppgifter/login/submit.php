@@ -45,8 +45,4 @@ if(isset($print)){
 else{
 	echo "Your Username or password is wrong please try again";
 }
-
-if (isset($_SESSION['user'])) {
-  echo "logged in";
- }
 ?>
