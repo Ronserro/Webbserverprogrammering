@@ -27,6 +27,9 @@
                 document.body.style.backgroundColor = "black";
             }
 		
+		    function rensa(){
+                document.body.innerHTML = "Hej Joakim";
+            }
 		
 		
 		</script>
@@ -47,6 +50,9 @@
 		<button onclick="dölj()">Dölj bild</button><br><br><br>
 		
 		<button onclick="färg()">Ändra färg</button><br><br>
+		
+		<button onclick="rensa()">rensa sidan</button><br><br>
+
 
 
 
