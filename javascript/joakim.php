@@ -8,7 +8,8 @@
         <title>Jaok</title>
         <meta charset="utf-8">
 		<script>
-		
+		    var siffra = 0;
+
 		
 		    window.onload=fun;
 
@@ -54,6 +55,23 @@
                     return;
                 }
             }
+			
+			function ett(){
+                siffra +=1;
+                document.getElementById("siffra").innerHTML = siffra;
+           }            
+            function ettt(){
+                siffra += 10;
+                document.getElementById("siffra").innerHTML = siffra;
+           }
+            function etttt(){
+                siffra += 100;
+                document.getElementById("siffra").innerHTML = siffra;
+           }
+            function reset(){
+                siffra = 0;
+                document.getElementById("siffra").innerHTML = siffra;
+            }
 		
 		
 		</script>
@@ -63,6 +81,13 @@
                 height: 50px;
                 width: 50px;
                 border: solid 4px black; 
+            }
+			
+			#siffra{
+                padding: 40px 40px 40px 40px;
+                display: inline-block;
+                background-color: aqua;
+                text-align: center;
             }
 		
 		</style>
@@ -82,6 +107,12 @@
 		<button onclick="rensa()">rensa sidan</button><br><br>
 
 	    <div onload="change()" id="backgrun" onclick="backgrund()"></div><br><br>
+		
+		<div id="siffra">0</div>
+        <button onclick="ett()">1</button>
+        <button onclick="ettt()">10</button>
+        <button onclick="etttt()">100</button>
+        <button onclick="reset()">Reset</button><br><br><br><br><br><br>
 
 
 
