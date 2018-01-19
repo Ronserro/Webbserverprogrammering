@@ -9,7 +9,9 @@
         <meta charset="utf-8">
 		<script>
 		    var siffra = 0;
-
+            
+            var nor = 0;
+            var oster = 0;
 		
 		    window.onload=fun;
 
@@ -97,6 +99,23 @@
                 document.getElementById("flytta_hörne").style.bottom = "0";
                 document.getElementById("flytta_hörne").style.left = "";
             }
+            
+            function norr(){
+                nor += 10;
+                document.getElementById("flytta").style.bottom = nor + "px"; 
+            }
+            function söder(){
+                nor -= 10;
+                document.getElementById("flytta").style.bottom = nor + "px";
+            }
+            function väster(){
+                oster -= 10;
+                document.getElementById("flytta").style.left = oster + "px";
+            }
+            function öster(){
+                oster += 10;
+                document.getElementById("flytta").style.left = oster + "px";
+            }
 		
 		
 		</script>
@@ -125,6 +144,13 @@
                 background-color: bisque;
                 position:absolute;
             }
+            #flytta{
+                width: 100px;
+                padding: 30px 20px 30px 40px;
+                background-color: fuchsia;
+                position: relative;
+                margin: auto;
+            }
 		
 		</style>
 		
@@ -148,13 +174,20 @@
         <button onclick="ett()">1</button>
         <button onclick="ettt()">10</button>
         <button onclick="etttt()">100</button>
-        <button onclick="reset()">Reset</button><br><br><br><br><br><br>
+        <button onclick="reset()">Reset</button><br><br><br><br>
 
         <div id="flytta_hörne">
         <button onclick="top_höger()">top-höger</button><br><br>
         <button onclick="top_vänster()">top-vänster</button><br><br>
         <button onclick="botten_vänster()">botten-vänster</button><br><br>
         <button onclick="botten_höger()">botten-höger</button><br><br>
+        </div>
+        
+        <div id="flytta">
+        <button onclick="öster()">öster</button><br><br>
+        <button onclick="väster()">väster</button><br><br>
+        <button onclick="norr()">norr</button><br><br>
+        <button onclick="söder()">söder</button><br><br>
         </div>
 
 
