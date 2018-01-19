@@ -11,6 +11,12 @@
 		    function hejsan(){
                 alert("hejsan Joakim");
             }
+			function bigimg(){
+                document.getElementById("pepe").style.height = "500px";
+            }   
+            function smallimg(){
+                document.getElementById("pepe").style.height = "200px";
+            }
 		
 		
 		
@@ -25,7 +31,9 @@
 
     <body>
 	
-	<button onclick="hejsan()">Alert</button><br><br>
+		<button onclick="hejsan()">Alert</button><br><br>
+	
+        <img onmouseout="smallimg()" onmouseover="bigimg()" src="lead_960.jpg" height="200px" id="pepe"/>
 
 
     </body>
