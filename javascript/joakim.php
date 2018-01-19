@@ -59,24 +59,53 @@
 			function ett(){
                 siffra +=1;
                 document.getElementById("siffra").innerHTML = siffra;
-           }            
+            }            
             function ettt(){
                 siffra += 10;
                 document.getElementById("siffra").innerHTML = siffra;
-           }
+            }
             function etttt(){
                 siffra += 100;
                 document.getElementById("siffra").innerHTML = siffra;
-           }
+            }
             function reset(){
                 siffra = 0;
                 document.getElementById("siffra").innerHTML = siffra;
+            }
+            
+            function top_höger(){
+                document.getElementById("flytta_hörne").style.top = "0";
+                document.getElementById("flytta_hörne").style.right = "0";
+                document.getElementById("flytta_hörne").style.bottom = "";
+                document.getElementById("flytta_hörne").style.left = "";
+            }
+            function top_vänster(){
+                document.getElementById("flytta_hörne").style.top = "0";
+                document.getElementById("flytta_hörne").style.right = "";
+                document.getElementById("flytta_hörne").style.bottom = "";
+                document.getElementById("flytta_hörne").style.left = "0";
+            }
+            function botten_vänster(){
+                document.getElementById("flytta_hörne").style.top = "";
+                document.getElementById("flytta_hörne").style.right = "";
+                document.getElementById("flytta_hörne").style.bottom = "0";
+                document.getElementById("flytta_hörne").style.left = "0";
+            }
+            function botten_höger(){
+                document.getElementById("flytta_hörne").style.top = "";
+                document.getElementById("flytta_hörne").style.right = "0";
+                document.getElementById("flytta_hörne").style.bottom = "0";
+                document.getElementById("flytta_hörne").style.left = "";
             }
 		
 		
 		</script>
 		
 		<style>
+            *{
+                margin: 0 0 0 5px;
+                padding: 0;
+            }
 		    #backgrun {
                 height: 50px;
                 width: 50px;
@@ -88,6 +117,13 @@
                 display: inline-block;
                 background-color: aqua;
                 text-align: center;
+            }
+			
+            #flytta_hörne{
+                width: 100px;
+                padding: 30px 20px 30px 40px;
+                background-color: bisque;
+                position:absolute;
             }
 		
 		</style>
@@ -114,6 +150,12 @@
         <button onclick="etttt()">100</button>
         <button onclick="reset()">Reset</button><br><br><br><br><br><br>
 
+        <div id="flytta_hörne">
+        <button onclick="top_höger()">top-höger</button><br><br>
+        <button onclick="top_vänster()">top-vänster</button><br><br>
+        <button onclick="botten_vänster()">botten-vänster</button><br><br>
+        <button onclick="botten_höger()">botten-höger</button><br><br>
+        </div>
 
 
 
