@@ -22,6 +22,10 @@
 			function dölj(){
                 document.getElementById("pepe").style.display = "none";
             }
+			
+			function färg(){
+                document.body.style.backgroundColor = "black";
+            }
 		
 		
 		
@@ -41,6 +45,9 @@
         <img onmouseout="smallimg()" onmouseover="bigimg()" src="lead_960.jpg" height="200px" id="pepe"/>
 		
 		<button onclick="dölj()">Dölj bild</button><br><br><br>
+		
+		<button onclick="färg()">Ändra färg</button><br><br>
+
 
 
 
